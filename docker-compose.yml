@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    container_name: lfi2rce
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9099:80
+    volumes:
+       - ./src/:/var/www/html/
+    image: lfi2rce
